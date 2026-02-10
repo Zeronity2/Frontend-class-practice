@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        body{
+            margin: 0;
+            text-align: center;
+        }
+        .main{
+            padding: 50px;
+            font-size: 35px;
+        }
+        /* desktop devices */
+        .main{
+            background-color: aqua;
+        }
+        /* mobile devices */ 
+        @media(max-width:600px){
+            .main{
+                background-color: blue;
+                font-size: 16px;
+            }
+        }
+        /* tablet devices    */
+        @media(max-width:601px)and(max-width:1024px){
+            .main{
+                background-color: brown;
+                color: blueviolet;
+                font-size: 25px;
+            }
+        }
+    </style>
+
+</head>
+<body>
+    <h2>Responsive</h2>
+    <div class="main">
+        Resize the screen <br>
+        Check for the color change!
+    </div>
+</body>
+</html>

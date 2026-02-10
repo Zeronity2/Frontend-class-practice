@@ -1,0 +1,45 @@
+
+
+/* CSS selectors */
+/* universal selector */
+
+*{
+background-color: brown;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* element selector */
+h4{
+    color: rgb(205, 14, 151);
+}
+
+/* class selector */
+.external{
+    color: blue;
+}
+
+/* id selector */
+#id1{
+    color: rgb(2, 72, 72);
+}
+    
+/* group selector */
+h3,h4,p{
+    color: blueviolet;
+}
+
+/* attribute selector */
+input[type="text"]{
+    background-color: lightgreen;
+    border: 2px solid green;
+    padding: 5px;
+}
+
+/* pseudo selector */
+a:hover{
+    color: red;
+    background-color: yellow;
+}
+
+
+
