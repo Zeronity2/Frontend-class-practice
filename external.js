@@ -94,10 +94,10 @@ const student={
 console.log(student);
 
 //json.stringfy() convert json obj to string
-// const jsString=JSON.stringify(student)
-// console.log(jsString)
-// console.log(typeof"type of converted string is: ",(jsString))
-// console.log("Type of student object is: ",typeof(student))
+const jsString=JSON.stringify(student)
+console.log(jsString)
+console.log(typeof"type of converted string is: ",(jsString))
+console.log("Type of student object is: ",typeof(student))
 
 
 //json.parse() convert string to json obj
