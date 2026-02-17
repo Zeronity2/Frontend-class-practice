@@ -4,12 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="external.js"></script>
+    <!-- <script src="external.js"></script> -->
     <!-- <script>
         function internal(){
             alert('SUBMITTING')
         }
     </script> -->
+    <script>
+        function arrayMethod(){
+            let marks = [5, 4, 3, 8, 10]
+            console.log("array is: ",marks)
+
+            //push
+            marks.push(80);
+            console.log("After push",marks);
+           
+            //pop
+            marks.pop(10);
+            console.log("After pop",marks);
+
+            //shift
+            marks.shift()
+            console.log("After shift",marks);
+
+            //length
+            console.log("Length of the array: ",marks.length());
+             
+            //endexOf - position
+            console.log("Index 0f 3: ",marks.indexOf(3));
+
+            //forEach
+            marks.forEach(m=>console.log(m))
+
+            //map - new array
+            let double = marks.map(m=>m*2)
+            console.log("Doubled array: ",double)
+
+            //filter
+            let pass = marks.filter(m=>m=>70)
+            console.log("Passed student is: ",pass)
+
+            //find
+            let findA = marks.find(m=>M<=50)
+            console.log(findA)
+
+
+
+        }
+    </script>
+
 </head>
 <body>
     <h2>Javascipt Types</h2>
@@ -21,7 +64,8 @@
       <button onclick="internal()">SUBMIT</button>
 
       <!-- external js -->
-       <button onclick="external()">DONE SUBMISSION</button>
+       <button onclick="external()">DONE SUBMISSION</button><br>
+       <button onclick="arrayMethod()">ARRAY</button>
 
     </body>
 </html>
