@@ -4,13 +4,104 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        #box{
+            height: 300px;
+            width: 300px;
+            background-color: aquamarine;
+            margin-top: 10px;
+        }
+    </style>
 </head>
 <body>
     <h1>JavaScript events</h1>
-    
+
     <!-- Event - user action click, type, hover -->
 
     <h1 id="heading">Hello JavaScript</h1>
-    <button id="btn"Change Test></button>
+    <button id="btn">Click</button><br>
+    <button id="singleclick">SingleClick</button><br>
+    <button id="dbclick">DoubleClick</button><br>
+    <!-- mouse event -->
+    <div id="box">Mouse Events</div>
+     <!-- keyboard event -->
+    <input type="text" name="" id="keyboardEvent" placeholder="Type here">
+    <!-- change event -->
+     <select name="" id="dropdown">
+        <option value="">select</option>
+        <option value="">green</option>
+        <option value="">red</option>
+        <option value="">yellow</option>
+     </select>
+
+     <!-- form event -->
+      <form action="" id="form1">
+        <input type="text" name="" required>
+        <button type="submit">Submit</button>
+      </form>
+
+
+
+<script>
+    //window event
+    window.addEventListener("resize", function(){
+        console.log("window resize")
+    })
+
+    
+
+    // change event
+    let dropdown = document.getElementById("change", function(){
+        document.body.style.background = dropdown.value
+    })
+
+
+    //mouse event
+    const box= document.getElementById("box");
+    box.addEventListener("mouseover", function(){
+        box.style.background = "green"
+    })
+     box.addEventListener("mouseout", function(){
+        box.style.background = "yellow"
+    })
+     box.addEventListener("mousedown", function(){
+        console.log("mouse is pressed")
+    })
+     box.addEventListener("mouseup", function(){
+        console.log("mouse is released")
+    })
+
+    //keyboard event
+    const key = document.getElementById("keyboardEvent");
+    key.addEventListener("keydown", function(){
+        console.log("Key is down", event.key)
+    })    
+
+    //access or select the element 
+    let heading = document.getElementById("heading")
+    let button = document.getElementById("btn")
+    let singleclick = document.getElementById("singleclick")
+    let dbclick = document.getElementById("dbclick");
+
+    //add the event
+    button.addEventListener("click", function(){
+      heading.innerHTML = "Welcome to js Events"
+
+      //addeventlistener = method
+      //click = event name
+      //function = what to do
+    })
+    singleclick.addEventListener("click", function(){
+        alert("hello , Button is clicked by a single click")
+    })
+
+    dbclick.addEventListener("click", function(){
+        alert("hello , Button is clicked by a single click")
+    })
+    
+
+</script>
+
+
 </body>
 </html>
