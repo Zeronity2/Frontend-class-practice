@@ -34,3 +34,25 @@ function checkResult(marks){
 
 checkResult(80).then(message => console.log("message"))
 .catch(error=>console.log("something went wrong"));
+
+//https://jsonplaceholder.typicode.com/posts
+
+function getData(){
+    return fetch("https://jsonplaceholder.typicode.com/posts/1")
+}
+getData()                             
+
+//convert the response to json 
+.then(function(response){
+    if(!response.ok){
+        throw new Error("Issue with api")
+    }
+    return response.json()
+})
+
+//get the data from api
+.then(function(data){
+    console.log("title is ",data.title)
+    console.log("body is: ",data.body)
+})
+ 
