@@ -55,4 +55,4 @@ getData()
     console.log("title is ",data.title)
     console.log("body is: ",data.body)
 })
- 
+
