@@ -53,6 +53,8 @@ function bookingAppointment(IsDoctorAvailable){
         })
 }
 
+
+
 async function booking(){
     try{
         const result = await bookingAppointment(true)
