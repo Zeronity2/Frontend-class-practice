@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Shoe Card</title>
+
+<style>
+
+body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-family:Arial;
+    background:linear-gradient(135deg,#ebf651,#e07228,rgb(215, 49, 49),rgb(212, 5, 129));
+}
+
+.container{
+    width:300px;
+    background:white;
+    padding:20px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+
+.img{
+    position:relative;
+    overflow:hidden;
+    border-radius:10px;
+}
+
+.img img{
+    width:100%;
+    display:block;
+}
+
+
+.sale{
+    position:absolute;
+    top:15px;
+    left:-30px;
+    background:red;
+    color:white;
+    padding:5px 40px;
+    font-weight:bold;
+    transform:rotate(-45deg);
+    font-size:14px;
+}
+
+.header{
+    font-size:22px;
+    font-weight:bold;
+    margin-top:10px;
+    text-align: left;
+}
+
+.price{
+    color:#ff4b5c;
+    font-weight: bold;
+    font-size:20px;
+    margin:10px 0;
+    text-align: left;
+}
+
+.button button{
+    margin:5px;
+    padding:8px 12px;
+    border:none;
+    border-radius:6px;
+    background:#eee;
+    cursor:pointer;
+}
+
+.button button:hover{
+    background:#ff4b5c;
+    color:white;
+}
+
+.cart button{
+    margin-top:15px;
+    width:100%;
+    padding:10px;
+    border:none;
+    border-radius:20px;
+    background:#ff4b5c;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+}
+.cart button:hover{
+    background-color: rgb(19, 1, 112);
+    color: #fffbfc;
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    
+
+<div class="img">
+    <div class="sale">SALE</div>
+
+<img src="https://image-prod.iol.co.za/resize/960x960/Nike-Ja-1-Image-Twitter-JaMorant?source=https://xlibris.public.prod.oc.inl.infomaker.io:8443/opencontent/objects/6edac18e-2abd-55c1-9cf8-1b62df30f7a6&operation=CROP&offset=85x0&resize=1329x1329">
+
+</div>
+
+<div class="header">Running Shoes</div>
+<div class="price">$2499</div>
+
+<div class="button">
+<button>S</button>
+<button>M</button>
+<button>L</button>
+</div>
+
+<div class="cart">
+<button>Add to Cart</button>
+</div>
+
+</div>
+
+</body>
+</html>
