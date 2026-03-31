@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .dark{
+            background: brown;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="heading">Introduction to DOM</h1>
+     <p id="para">to DOM</p>
+     <!-- Dynamic Styling -->
+     <button onclick="toggle()">Toggle Mode</button>
+     <!-- Events -->
+      <button id="button">Click</button>
+
+     <script>
+    //  events
+       document.getElementById("button").addEventListener("click", ()=>{
+           alert("btn is clicked")
+      });
+
+    //    dynamic Styling
+       function toggle(){
+        document.body.classList.toggle("dark")
+       }
+
+
+        console.log(document)
+        console.log(document-body)
+        
+
+        let head =  document.getElementById("heading")
+        console.log(head.parentNode)
+        console.log(head.nextElementSibling)
+        console.log(document.body.children)
+
+        let handing = document.getElementById("heading")
+        heading.textContent="Text is changed"
+        heading.style.color="red"
+
+        let newEle = document.createElement("p")
+        newEle.textContent = "This is new PAra"
+        document.body.append(newEle)
+     </script> 
+</body>
+</html>
