@@ -13,7 +13,31 @@
     <ul id="taskList"></ul>
 
     <script>
+         let taskinput = document.getElementById("taskinput")
+         let addBtn = document.getElementById("addBtn")
+         let search = document.getElementById("search")
+         let taskList = document.getElementById("taskList")
+    // add the task
+    addBtn.addEventListener("click",()=>{
+        if(taskinput==="") return
+
+        let li = document.createElement("li")
+
+        li.innerHTML = `
+          <span>${taskinput.value}</span>
+          <button>Delete Task</button>
+        `
+
+        taskList.appendChild(li)
+        taskinput.value = ""
+
+        //task to complete
+
+        //search the task
+
+        //delete the task
+    })     
         
-    </script>
+        </script>
 </body>
 </html>
