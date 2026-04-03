@@ -13,6 +13,9 @@
     "nodemon": "^3.1.11",
     "tailwindcss": "^4.1.18"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.1.0"
+  },
   "description": ""
 }

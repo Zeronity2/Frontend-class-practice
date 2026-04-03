@@ -7,3 +7,7 @@ function y(){
     console.log("Hi")
     let p=546
 }
+
+//install
+//intialize  npx eslint --init
+ 
