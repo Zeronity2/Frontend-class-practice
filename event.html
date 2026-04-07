@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- EventPropagation -->
+    <!-- check for how the event is travel through DOM -->
+    <!-- 1. capturing phase top - down -->
+    <!-- event start from top root elem to target element -->
+    <!-- 2. target element - actual element -->
+    <!-- 3. event bubbling - bottom to top -->
+    <!-- trave back to root element -->
+
+    <div id="parent">Hello parent
+        <button id="child">click</button>
+    </div>
+    <ul id="list">
+        <li>hii</li>
+        <li>hoo</li>
+        <li>hee</li>
+    </ul>
+
+    <script>
+        document.getElementById("parent").addEventListener("click",()=>{
+            console.log("parent clicked");
+        });
+        document.getElementById("child").addEventListener("click",(e)=>{
+            console.log("child clicked");
+            e.stopPopagation();//you don't want to click parent
+        });
+//event delegation
+//instead of using mutiple event listeners to many child elements we add only one single event
+        document.getElementById("list").addEventListener("click",()=>{
+        })
+    </script>
+</body>
+</html>
