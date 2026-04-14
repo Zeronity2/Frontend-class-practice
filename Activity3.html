@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Feedback Hub</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: #0c0c0f;
+    color: white;
+    padding: 30px;
+}
+
+/* HEADER */
+.header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 30px;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #6c63ff, #4fd1c5);
+}
+
+.header h1 {
+    font-size: 22px;
+}
+
+.header p {
+    font-size: 13px;
+    color: #aaa;
+}
+
+/* MAIN LAYOUT */
+.container {
+    display: flex;
+    gap: 30px;
+}
+
+/* LEFT PANEL */
+.form-box {
+    width: 320px;
+    background: #15151a;
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid #2a2a2f;
+}
+
+.form-box h2 {
+    margin-bottom: 15px;
+}
+
+label {
+    font-size: 13px;
+    color: #aaa;
+    display: block;
+    margin: 10px 0 5px;
+}
+
+select, textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    background: #1e1e25;
+    color: white;
+}
+
+textarea {
+    height: 100px;
+    resize: none;
+}
+
+/* STARS */
+.stars {
+    display: flex;
+    gap: 5px;
+    font-size: 20px;
+    color: gold;
+    margin: 10px 0;
+}
+
+/* BUTTON */
+.btn {
+    margin-top: 15px;
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 25px;
+    background: linear-gradient(135deg, #4fd1c5, #6c63ff);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* RIGHT PANEL */
+.right {
+    flex: 1;
+}
+
+.right h2 {
+    margin-bottom: 15px;
+}
+
+/* CARDS */
+.card {
+    background: #15151a;
+    border: 1px solid #2a2a2f;
+    padding: 15px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+.card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.badge {
+    padding: 3px 8px;
+    border-radius: 10px;
+    font-size: 12px;
+    margin-left: 8px;
+}
+
+.high { background: #ff4d4d33; color: #ff4d4d; }
+.medium { background: #ffaa0033; color: #ffaa00; }
+.low { background: #00ff9933; color: #00ff99; }
+
+.card p {
+    margin: 10px 0;
+    color: #ccc;
+}
+
+.time {
+    font-size: 12px;
+    color: #777;
+}
+
+/* STARS RIGHT */
+.star-right {
+    color: gold;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<div class="header">
+    <div class="logo"></div>
+    <div>
+        <h1>Feedback Hub</h1>
+        <p>Help us make this website better</p>
+    </div>
+</div>
+
+<div class="container">
+
+    <!-- LEFT FORM -->
+    <div class="form-box">
+        <h2>➕ Submit Feedback</h2>
+
+        <label>Category</label>
+        <select>
+            <option>Bug Report</option>
+            <option>Feature Request</option>
+            <option>Review / Suggestion</option>
+        </select>
+
+        <label>Rate this feedback</label>
+        <div class="stars">
+            ★ ★ ★ ★ ★
+        </div>
+
+        <label>Description</label>
+        <textarea placeholder="Please describe the issue or idea in detail..."></textarea>
+
+        <button class="btn">🚀 SUBMIT TO TEAM</button>
+    </div>
+
+    <!-- RIGHT SECTION -->
+    <div class="right">
+        <h2>Recent Feedbacks</h2>
+
+        <!-- CARD 1 -->
+        <div class="card">
+            <div class="card-top">
+                <div>
+                    🐞 Bug <span class="badge high">High</span>
+                </div>
+                <div class="star-right">★★★★☆</div>
+            </div>
+            <p>Login button not working on mobile view.</p>
+            <div class="time">2 min ago</div>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="card">
+            <div class="card-top">
+                <div>
+                    ✨ Feature <span class="badge medium">Medium</span>
+                </div>
+                <div class="star-right">★★★★★</div>
+            </div>
+            <p>Add dark mode toggle in header.</p>
+            <div class="time">15 min ago</div>
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="card">
+            <div class="card-top">
+                <div>
+                    ⭐ Review <span class="badge low">Low</span>
+                </div>
+                <div class="star-right">★★★★★</div>
+            </div>
+            <p>The new design looks clean and modern!</p>
+            <div class="time">1 hour ago</div>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
