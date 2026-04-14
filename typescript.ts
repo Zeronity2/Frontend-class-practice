@@ -80,3 +80,32 @@ function a(Id:String | number){
 }
 a(12)
 a("khushipatel")
+
+//intersection in ts
+//combines multiple types into one 
+//value satisfy all the types
+type A = {name:string}
+type B = {age:number}
+type c = A & B
+
+//Example
+type Employee = {name:string}
+type Manager = {depart:string}
+
+type ManagerEmp = Employee & Manager
+let emp:ManagerEmp = {
+    name:"Khushi",
+    depart:"IT"  //intersection - > AND
+}
+
+type User = {email:string}
+type pass = {pass:string}
+//secure user
+type secureUser = User & pass
+
+//Type interference and narrowing
+ 
+//type inference
+//ts will automatically guesses the type 
+let name = "test" //inferred as string
+
