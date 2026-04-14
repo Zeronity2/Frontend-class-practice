@@ -34,78 +34,109 @@
 
 //interfaces
 //define the scructure of the object
-//what kind of properties object should have
+// //what kind of properties object should have
 
-interface Student{
-    name:String
-    age:number
-    isActive:boolean
-}
-//create a object
-let s1:Student={
-    name:"abc",
-    age:343,
-    isActive:false
-}
-//example
-interface Order{
-    orderId:number
-    Product:String
-    isDelivered:boolean
-    customerName:String
-}
+// interface Student{
+//     name:String
+//     age:number
+//     isActive:boolean
+// }
+// //create a object
+// let s1:Student={
+//     name:"abc",
+//     age:343,
+//     isActive:false
+// }
+// //example
+// interface Order{
+//     orderId:number
+//     Product:String
+//     isDelivered:boolean
+//     customerName:String
+// }
 
-let order1:Order={
-    orderId: 1,
-    Product: "Laptop",
-    isDelivered: true,
-    customerName: "Khushi"
-}
+// let order1:Order={
+//     orderId: 1,
+//     Product: "Laptop",
+//     isDelivered: true,
+//     customerName: "Khushi"
+// }
 
-function printOrder(){
-    console.log(order1.orderId)
-    console.log(order1.Product)
-    console.log(order1.isDelivered)
-    console.log(order1.customerName)
-}
+// function printOrder(){
+//     console.log(order1.orderId)
+//     console.log(order1.Product)
+//     console.log(order1.isDelivered)
+//     console.log(order1.customerName)
+// }
 
-//Union and intersection types
-//Union defines that one datatype can have multiple value
-let value : String | number
-value = "khushipatel"
-value = 12
+// //Union and intersection types
+// //Union defines that one datatype can have multiple value
+// let value : String | number
+// value = "khushipatel"
+// value = 12
 
-function a(Id:String | number){
-    console.log("Id is: ",Id)
-}
-a(12)
-a("khushipatel")
+// function a(Id:String | number){
+//     console.log("Id is: ",Id)
+// }
+// a(12)
+// a("khushipatel")
 
-//intersection in ts
-//combines multiple types into one 
-//value satisfy all the types
-type A = {name:string}
-type B = {age:number}
-type c = A & B
+// //intersection in ts
+// //combines multiple types into one 
+// //value satisfy all the types
+// type A = {name:string}
+// type B = {age:number}
+// type c = A & B
 
-//Example
-type Employee = {name:string}
-type Manager = {depart:string}
+// //Example
+// type Employee = {name:string}
+// type Manager = {depart:string}
 
-type ManagerEmp = Employee & Manager
-let emp:ManagerEmp = {
-    name:"Khushi",
-    depart:"IT"  //intersection - > AND
-}
+// type ManagerEmp = Employee & Manager
+// let emp:ManagerEmp = {
+//     name:"Khushi",
+//     depart:"IT"  //intersection - > AND
+// }
 
-type User = {email:string}
-type pass = {pass:string}
-//secure user
-type secureUser = User & pass
+// type User = {email:string}
+// type pass = {pass:string}
+// //secure user
+// type secureUser = User & pass
 
-//Type interference and narrowing
+// //Type interference and narrowing
  
-//type inference
-//ts will automatically guesses the type 
-let name = "test" //inferred as string
+// //type inference
+// //ts will automatically guesses the type 
+// let name = "test" //inferred as string
+// //type narrowing
+// //ts reduces type based on conditions
+// function Test(value:string | number){
+//     console.log(value.toUpperCase())
+// };
+//ex2
+// function login(input: string | boolean){
+//     if(typeOf input == "string"){
+//         console.log("username",input);
+//     }
+//     else{
+//         console.log("status",input); 
+//     }
+// }
+// login("Khushi");
+// console.log("--------------");
+// login(true);
 
+
+//Generics
+//you can write reusable code
+//write type once and can be used for any type
+
+function identity<Type>(data: Type): Type{
+    return data;
+}
+
+function getData<T>(data: T): T{
+    return data;
+}
+getData<string>("Hello")
+getData<number>(1223) 
