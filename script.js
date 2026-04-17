@@ -13,7 +13,7 @@ function displayProducts(items) {
 
     items.forEach(p => {
         container.innerHTML += `
-            <div class="card">
+            <div class="card">  
                 <h2>${p.name}</h2>
                 <p>Category: ${p.category}</p>
                 <p>Price: ₹${p.price}</p>
@@ -41,5 +41,5 @@ function filterProducts() {
         );
     });
 
-    displayProducts(filtered);
+    displayProducts(filtered);    
 }
